@@ -1,4 +1,4 @@
-import { faBoxes, faHome, faMoneyBillAlt, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faBoxes, faDatabase, faHome, faMoneyBillAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -43,7 +43,7 @@ class Toolbar extends React.Component{
                                     
                                 </Link>
 
-                                <Link className="lk-new-contact" to="/usuario">
+                                <Link className="lk-new-contact" to="/">
                                     <div >
                                         <FontAwesomeIcon className="iconoX" icon={faUser}/>
                                         {/* <i class="fas fa-user"></i> */}
@@ -54,10 +54,10 @@ class Toolbar extends React.Component{
                                 </Link>
                             </div>
                             <div className="col-md-4">
-                                <Link className="lk-new-contact" to="/venta">
+                                <Link className="lk-new-contact" to="/add">
                                     <div >
-                                        <FontAwesomeIcon className="iconoX" icon={faMoneyBillAlt}/>
-                                        <p>Ventas</p>
+                                        <FontAwesomeIcon className="iconoX" icon={faDatabase}/>
+                                        <p>Nuevo Usuario</p>
 
                                     </div>
                                     
