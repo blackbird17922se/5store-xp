@@ -1,0 +1,51 @@
+.Navbar {
+    width: 100%;
+    padding: 0.5rem 0;
+    background: linear-gradient(270deg, #817f7f 0%, #505050 70%);
+}
+
+.Navbar span{
+    color: rgb(221, 221, 221);
+    margin-left: 11px;
+    font-size: 20px;
+}
+/*  */
+.Toolbar {
+    width: 100%;
+    padding: 0.5rem 0;
+    /* background: linear-gradient(270deg, #d2662b 15%, #e78551, #d2662b); */
+    background: linear-gradient(360deg, #000d6c 0%, #000001 100%);
+    color: #fff;
+}
+.Toolbar .info-cant{
+    line-height: 1;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.Toolbar .info-cant .info-cant-number{
+    font-size: 25px; 
+}
+.Toolbar .info-tx{
+    font-size: 14px;   
+}
+
+/* .tool-cont{
+    padding: 10px 0px;
+} */
+
+.lk-new-contact{
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    margin: 10px 30px 10px 30px
+}
+.lk-new-contact p{
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.iconoX{
+    color: white;
+    /* margin-right: 20px; */
+}
