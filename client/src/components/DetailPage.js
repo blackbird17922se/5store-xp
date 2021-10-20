@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
 
-class DetailPage extends React.Component {
-    render() { 
-        return <div></div>;
-    }
-}
+// class DetailPage extends React.Component {
+//     render() { 
+//         return <div></div>;
+//     }
+// }
  
-export default DetailPage;
+// export default DetailPage;

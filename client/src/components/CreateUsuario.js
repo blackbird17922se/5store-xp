@@ -11,6 +11,7 @@ export default class CreateUsuario extends Component {
         this.state = {
             nombre: '',
             correo: '',
+            pass: '',
             estado:1,
             rol:'',
             errors:{}
@@ -35,8 +36,8 @@ export default class CreateUsuario extends Component {
     };
 
 
-    validar = (nombre,correo,estado,rol) => {
-        const errors = setErrors(nombre,correo,estado,rol);
+    validar = (nombre,correo,pass,estado,rol) => {
+        const errors = setErrors(nombre,correo,pass,estado,rol);
         this.setState({errors: errors})
         return Object.values(errors).every((err) => err === "")
     }
@@ -44,13 +45,14 @@ export default class CreateUsuario extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
-        const {nombre,correo,estado,rol} = this.state;
+        const {nombre,correo,pass,estado,rol} = this.state;
 
-        if(this.validar(nombre,correo,estado,rol)){
+        if(this.validar(nombre,correo,pass,estado,rol)){
             
             const data = {
                 nombre: nombre,
                 correo: correo,
+                pass: pass,
                 estado: estado,
                 rol: rol
             }
@@ -61,6 +63,7 @@ export default class CreateUsuario extends Component {
                     this.setState({
                         nombre: '',
                         correo: '',
+                        pass: '',
                         estado:1,
                         rol:'',
                         // _id: ''
@@ -108,6 +111,21 @@ export default class CreateUsuario extends Component {
                                 />
                                 {this.state.errors.correo && (
                                     <div className="text-danger">{this.state.errors.correo}</div>
+                                )}
+                            </div>
+
+                            <div className="form-group">
+                            <label>pass</label>
+                                <input 
+                                    name="pass" 
+                                    className="form-control"
+                                    type="text" 
+                                    placeholder="pass tarea"
+                                    onChange = {this.cacharCambio}
+                                    value = {this.state.pass}
+                                />
+                                {this.state.errors.pass && (
+                                    <div className="text-danger">{this.state.errors.pass}</div>
                                 )}
                             </div>
 

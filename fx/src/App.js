@@ -9,7 +9,7 @@ import Producto from './components/pages/producto';
 import LandingPage from './components/LandingPage';
 import EditarUsuario from './components/EditarUsuario';
 import CreateUsuario from './components/CreateUsuario';
-import DetailPage from './components/DetailPage';
+// import DetailPage from './components/DetailPage';
 
 class App extends Component {
   render(){
@@ -25,7 +25,7 @@ class App extends Component {
 
                   <Route exact path="/update/:id" component={EditarUsuario}/>
                   <Route exact path="/add" component={CreateUsuario}/>
-                  <Route exact path="/detail/:id" component={DetailPage}/>
+                  {/* <Route exact path="/detail/:id" component={DetailPage}/> */}
               </Switch>
           </Layout>
       </BrowserRouter>
