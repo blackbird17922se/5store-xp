@@ -4,6 +4,9 @@ import express from "express";
 import mongoose from 'mongoose';
 import bodyparser from 'body-parser';
 import router from './routes/post.js';
+import Rproducto from './routes/Rproducto.js';
+import Rventa from './routes/Rventa.js';
+
 import cors from 'cors';
 // const bodyparser = require("body-parser");
 // const router = require('./routes/post.js')
@@ -19,6 +22,8 @@ appExpress.use(cors());
 
 /* puede ir usuario */
 appExpress.use('/posts', router);
+appExpress.use('/Rproducto', Rproducto);
+appExpress.use('/Rventa', Rventa);
 
 appExpress.get("/", (req, resp) => {
     resp.send({Proyecto: "5store"})

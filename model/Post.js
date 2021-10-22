@@ -1,6 +1,4 @@
-/* una vez hecha la coneccion en database */
 import mongoose from 'mongoose';
-// const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
@@ -13,18 +11,10 @@ const  usuarioSchema = new Schema(
         nombre: {type: String, required: true},
         correo: {type: String, required: true},
         pass: {type: String, required: true},
-        estado: {type: Boolean, required: true},
+        estado: {type: String, required: true},
         rol: {type: String, required: true}
     }
 )
-
-
-// const  usuarioSchema = mongoose.Schema({
-//     nombre: {type: String, required: true},
-//     correo: {type: String, required: true},
-//     estado: {type: Boolean, required: true},
-//     rol: {type: String, required: true}
-// });
 
 
 
@@ -33,7 +23,3 @@ const  usuarioSchema = new Schema(
 //TODO: ESTE POST PODRIA SER EL NOMBRE DE LA BD EN MONDABD??
 const Post = mongoose.model('posts', usuarioSchema);
 export default Post;
-
-// module.exports={
-//     Post: mongoose.model("posts", usuarioSchema),
-// };

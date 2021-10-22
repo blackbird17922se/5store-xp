@@ -1,0 +1,28 @@
+.login{
+    /* background: yellow; */
+  height: 150px;
+  /*IMPORTANTE*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.card-login{
+    /* background: red; */
+    width: 600px;
+
+}
+
+.login-container{
+    text-align: center;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(86, 86, 86);
+    margin-top: 300px;
+    margin-left: 190px;
+    border-radius: 5px;
+}

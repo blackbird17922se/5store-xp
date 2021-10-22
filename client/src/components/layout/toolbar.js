@@ -2,8 +2,6 @@ import { faBoxes, faDatabase, faHome, faMoneyBillAlt, faUser } from '@fortawesom
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import '../styles/navbar.css'
-// import btnNewContact from '../../images/btn-new-contact.png'
 
 class Toolbar extends React.Component{
     render(){
@@ -43,7 +41,7 @@ class Toolbar extends React.Component{
                                     
                                 </Link>
 
-                                <Link className="lk-new-contact" to="/">
+                                <Link className="lk-new-contact" to="/usuario">
                                     <div >
                                         <FontAwesomeIcon className="iconoX" icon={faUser}/>
                                         {/* <i class="fas fa-user"></i> */}
@@ -58,6 +56,24 @@ class Toolbar extends React.Component{
                                     <div >
                                         <FontAwesomeIcon className="iconoX" icon={faDatabase}/>
                                         <p>Nuevo Usuario</p>
+
+                                    </div>
+                                    
+                                </Link>
+
+                                <Link className="lk-new-contact" to="/addProducto">
+                                    <div >
+                                        <FontAwesomeIcon className="iconoX" icon={faDatabase}/>
+                                        <p>Nuevo Producto</p>
+
+                                    </div>
+                                    
+                                </Link>
+
+                                <Link className="lk-new-contact" to="/nventa">
+                                    <div >
+                                        <FontAwesomeIcon className="iconoX" icon={faDatabase}/>
+                                        <p>Nueva Venta</p>
 
                                     </div>
                                     
