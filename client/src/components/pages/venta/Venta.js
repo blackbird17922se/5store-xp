@@ -26,11 +26,12 @@ export default class Venta extends Component {
     });
   }
 
+  // venta.estado.toLowerCase().includes(searchTerm)
+  // venta.valUnit.toLowerCase().includes(searchTerm) ||
   filterContent(ventas, searchTerm){
     const resultado = ventas.filter((venta) => 
-      // venta.descrip.toLowerCase().includes(searchTerm) ||
-      venta.estado.toLowerCase().includes(searchTerm)
-      // venta.valUnit.toLowerCase().includes(searchTerm) ||
+      venta.nombre.toLowerCase().includes(searchTerm) ||
+      venta.descrip.toLowerCase().includes(searchTerm)
     );
     this.setState({ventas: resultado});
   }
@@ -44,6 +45,7 @@ export default class Venta extends Component {
       }
     });
   }
+
 
   render() { 
     return ( 
