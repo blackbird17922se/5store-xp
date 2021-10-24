@@ -26,11 +26,30 @@ export default class Venta extends Component {
     });
   }
 
+  /* 
+  
+        idProd: {type: String, required: true},
+        descrip: {type: String, required: true},
+        cant: {type: String, required: true},
+        valUnit: {type: String, required: true},
+        totalV: {type: String, required: true},
+        fecha: {type: String, required: true},
+        doClient: {type: String, required: true},
+        nomClient: {type: String, required: true},
+        estado: {type: String, required: true}
+        */
+
   // venta.estado.toLowerCase().includes(searchTerm)
   // venta.valUnit.toLowerCase().includes(searchTerm) ||
   filterContent(ventas, searchTerm){
     const resultado = ventas.filter((venta) => 
-      venta.nombre.toLowerCase().includes(searchTerm) ||
+      venta.idProd.toLowerCase().includes(searchTerm) ||
+      venta.cant.toLowerCase().includes(searchTerm) ||
+      venta.totalV.toLowerCase().includes(searchTerm) ||
+      venta.fecha.toLowerCase().includes(searchTerm) ||
+      venta.doClient.toLowerCase().includes(searchTerm) ||
+      venta.nomClient.toLowerCase().includes(searchTerm) ||
+      venta.estado.toLowerCase().includes(searchTerm) ||
       venta.descrip.toLowerCase().includes(searchTerm)
     );
     this.setState({ventas: resultado});

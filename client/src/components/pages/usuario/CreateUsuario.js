@@ -12,7 +12,7 @@ export default class CreateUsuario extends Component {
             nombre: '',
             correo: '',
             pass: '',
-            estado:1,
+            estado:'',
             rol:'',
             errors:{}
             // _id: ''
@@ -59,7 +59,7 @@ export default class CreateUsuario extends Component {
             console.log(data);
             Axios.post("/posts/add", data).then((res) => {
                 if(res.data.success){
-                    alert("Add");
+                    alert("Usuario Creado Correctamente");
                     this.setState({
                         nombre: '',
                         correo: '',

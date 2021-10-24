@@ -85,7 +85,7 @@ export default class EditarUsuario extends Component {
             /* el /update/ lo trae desde routes/post*/
             Axios.put(`/posts/update/${id}`, data).then((res) => {
                 if(res.data.success){
-                    alert("Actualizado");
+                    alert("Usuario Actualizado");
                 }
             })
         }

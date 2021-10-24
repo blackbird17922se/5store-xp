@@ -11,7 +11,6 @@ export default class NVenta extends Component {
     }
   }
 
-
   componentDidMount(){
     this.getProductos();
   }
@@ -27,32 +26,22 @@ export default class NVenta extends Component {
     });
   }
 
-  onAgregar = (id) => {
-    alert(id)
-    // axios.delete(`/Rventa/delete/${id}`).then((res) => {
-    //   alert("Eliminado " + res.data.descrip);
 
-    //   /* acualizar lista */
-    //   this.getventas();
-    // });
-  }
-
-
-  filterContent(ventas, searchTerm){
-    const resultado = ventas.filter((venta) => 
-      venta.descrip.toLowerCase().includes(searchTerm) ||
-      venta.valUnit.toLowerCase().includes(searchTerm) ||
-      venta.estado.toLowerCase().includes(searchTerm)
+  filterContent(productos, searchTerm){
+    const resultado = productos.filter((producto) => 
+      producto.descrip.toLowerCase().includes(searchTerm) ||
+      producto.valUnit.toLowerCase().includes(searchTerm) ||
+      producto.estado.toLowerCase().includes(searchTerm)
     );
-    this.setState({ventas: resultado});
+    this.setState({productos: resultado});
   }
 
   handleBusqueda = (e) => {
     const searchTerm = e.currentTarget.value;
 
-    axios.get("/Rventa/venta").then((resp) => {
+    axios.get("/Rproducto/producto").then((resp) => {
       if(resp.data.success){
-        this.filterContent(resp.data.ventas, searchTerm)
+        this.filterContent(resp.data.productos, searchTerm)
       }
     });
   }
@@ -63,7 +52,7 @@ export default class NVenta extends Component {
       <React.Fragment>
       
       <Toolbar/>
-      <h1>Venta</h1>
+      <h1>Catalogo de Venta</h1>
       <div className="container mt-5">
         <div className="col-lg-3 mb-3">
           <input
@@ -100,7 +89,7 @@ export default class NVenta extends Component {
                     href={`/addVenta/${producto._id}`}
                     >
 
-                    <i className="fas fa-trast"></i>Agregar a Venta
+                    <i className="fas fa-trast"></i>Comprar
                   </a>
                 </td>
               </tr>

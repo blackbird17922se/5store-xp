@@ -127,50 +127,20 @@ export default class CreateVenta extends Component {
 
                 <div className="col-md-10 mt-3 mx-auto">
                     <h1>Venta Producto {this.state.descrip}</h1>
+                    <h3>Total ${this.state.valUnit * this.state.cant}</h3>
+                    <h6>(Precio Unidad: ${this.state.valUnit})</h6>
                     
-                        <form>
+                        <form className="mt-4">
 
-                            <div className="form-group mb-3">
-                            <label>Estado de la Venta</label>
-
-                            <select
-                                name="estado" 
-                                className="form-select"
-                                type="number" 
-                                placeholder="estado tarea"
+                            <input 
+                                name="valUnit" 
+                                className="form-control"
+                                type="hidden" 
+                                placeholder="Ej: 30000"
                                 onChange = {this.cacharCambio}
-                                value = {this.state.estado}
-                                aria-label="Default select example">
-                                <option selected>Seleccione una opción</option>
-                                <option value="En Proceso">En Proceso</option>
-                                <option value="Cancelada">Cancelada</option>
-                                <option value="Entregada">Entregada</option>
-                            </select>
-
-                                {this.state.errors.estado && (
-                                    <div className="text-danger">{this.state.errors.estado}</div>
-                                )}
-                            </div>
-
-
-                            <div className="form-group mb-3">
-                            <label>Valor Unitario</label>
-                                <input 
-                                    name="valUnit" 
-                                    className="form-control"
-                                    type="text" 
-                                    placeholder="Ej: 30000"
-                                    onChange = {this.cacharCambio}
-                                    value = {this.state.valUnit}
-                                    readOnly
-                                />
-                                {this.state.errors.valUnit && (
-                                    <div className="text-danger">{this.state.errors.valUnit}</div>
-                                )}
-                            </div>
-
-
-                            
+                                value = {this.state.valUnit}
+                                readOnly
+                            />
 
 
                             <div className="form-group mb-3">
@@ -189,41 +159,26 @@ export default class CreateVenta extends Component {
                                 )}
                             </div>
 
-                            <div className="form-group mb-3">
-                                <label>Total</label>
-                                <input 
-                                    name="totalV" 
-                                    className="form-control"
-                                    type="number" 
-                                    
-                                    onChange = {this.cacharCambio}
-                                    value = {this.state.totalV = this.state.valUnit * this.state.cant} 
-                                    readOnly                              
-                                />
-                                {this.state.errors.totalV && (
-                                    <div className="text-danger">{this.state.errors.totalV}</div>
-                                )}
-                            </div>
+
+                            <input 
+                                name="totalV" 
+                                className="form-control"
+                                type="hidden" 
+                                
+                                onChange = {this.cacharCambio}
+                                value = {this.state.totalV = this.state.valUnit * this.state.cant} 
+                                readOnly                              
+                            />
 
 
-                            <div className="form-group mb-3">
-                                <label>Fecha</label>
-                                <input 
-                                    name="fecha" 
-                                    className="form-control"
-                                    type="text" 
-                                    
-                                    onChange = {this.cacharCambio}
-                                    value = {this.state.fecha} 
-                                    readOnly                                     
-                                />
-                                {this.state.errors.fecha && (
-                                    <div className="text-danger">{this.state.errors.fecha}</div>
-                                )}
-                            </div>
-
-
-                           
+                            <input 
+                                name="fecha" 
+                                className="form-control"
+                                type="hidden" 
+                                onChange = {this.cacharCambio}
+                                value = {this.state.fecha} 
+                                readOnly                                     
+                            />
 
 
                             <div className="form-group mb-3">
@@ -232,10 +187,8 @@ export default class CreateVenta extends Component {
                                     name="doClient" 
                                     className="form-control"
                                     type="number" 
-                                    
                                     onChange = {this.cacharCambio}
                                     value = {this.state.doClient} 
-                                                                         
                                 />
                                 {this.state.errors.doClient && (
                                     <div className="text-danger">{this.state.errors.doClient}</div>
@@ -258,8 +211,31 @@ export default class CreateVenta extends Component {
                                     <div className="text-danger">{this.state.errors.nomClient}</div>
                                 )}
                             </div>
+
+
+                            <div className="form-group mb-3">
+                            <label>Estado de la Venta</label>
+
+                            <select
+                                name="estado" 
+                                className="form-select"
+                                type="number" 
+                                placeholder="estado tarea"
+                                onChange = {this.cacharCambio}
+                                value = {this.state.estado}
+                                aria-label="Default select example">
+                                <option selected>Seleccione una opción</option>
+                                <option value="En Proceso">En Proceso</option>
+                                <option value="Cancelada">Cancelada</option>
+                                <option value="Entregada">Entregada</option>
+                            </select>
+
+                                {this.state.errors.estado && (
+                                    <div className="text-danger">{this.state.errors.estado}</div>
+                                )}
+                            </div>
                             
-                            <button type="submit" className="btn btn-success" onClick={this.onSubmit}>Guardar</button>
+                            <button type="submit" className="btn btn-success" onClick={this.onSubmit}>Procesar Venta</button>
 
                         </form>
                     

@@ -13,9 +13,9 @@ const ventaSchema = new Schema(
     {
         idProd: {type: String, required: true},
         descrip: {type: String, required: true},
-        cant: {type: Number, required: true},
-        valUnit: {type: Number, required: true},
-        totalV: {type: Number, required: true},
+        cant: {type: String, required: true},
+        valUnit: {type: String, required: true},
+        totalV: {type: String, required: true},
         fecha: {type: String, required: true},
         doClient: {type: String, required: true},
         nomClient: {type: String, required: true},
