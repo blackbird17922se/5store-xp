@@ -26,3 +26,44 @@
     margin-left: 190px;
     border-radius: 5px;
 }
+
+
+
+
+#body-login{
+    /* background: rgb(49, 49, 49); */
+    /* background: url("../img/bg_login.jpg") no-repeat; */
+    width: 100%;
+    background-size: cover;
+}
+
+#body-login .cont-logo{
+    margin-top: 30px;
+}
+
+.cont-frm-log{
+    background: rgb(37, 37, 37, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 3px;
+    padding: 30px;
+    margin-top: 50px; 
+    color: #ffffff;   
+}
+
+.cont-frm-log h1{
+    color: #1a0079;
+    font-size: 40px;
+}
+
+.cont-frm-log .form-group label{
+    text-transform: uppercase;
+}
+
+#cont_log{
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+
+}
