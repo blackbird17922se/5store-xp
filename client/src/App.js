@@ -19,15 +19,26 @@ import EditarVenta from './components/pages/venta/EditarVenta';
 
 import Login from './components/Login';
 
-class App extends Component {
-  render(){
+
+
+function App () {
+ 
+
     return(
+
+
+      
+
+
       <BrowserRouter>
         <Layout>
           <Switch>
 
             {/* LOGIN Y PAGINA INICIAL */}
             <Route exact path="/" component={Login}/>
+
+          {/* {isAuthenticated} */}
+
             <Route exact path="/main" component={Main}/>
 
             {/* USUARIOS */}
@@ -53,8 +64,9 @@ class App extends Component {
           </Switch>
         </Layout>
       </BrowserRouter>
+
     )
-  }
+  
 }
  
 export default App;

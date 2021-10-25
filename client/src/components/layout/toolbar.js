@@ -2,9 +2,13 @@ import { faBoxes, faDatabase, faHome, faMoneyBillAlt, faUser } from '@fortawesom
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {useAuth0} from "@auth0/auth0-react";
 
-class Toolbar extends React.Component{
-    render(){
+function Toolbar(){
+
+    const{logout} = useAuth0();
+    
+
         return(
             <div>
 
@@ -16,7 +20,7 @@ class Toolbar extends React.Component{
 
                                 <Link className="lk-new-contact" to="/">
                                     <div >
-                                        <FontAwesomeIcon className="iconoX" icon={faHome}/>
+                                        <FontAwesomeIcon className="iconoX" icon={faHome} onClick={() => logout()}/>
                                         <p>Inicio</p>
 
                                     </div>
@@ -87,6 +91,6 @@ class Toolbar extends React.Component{
         )
     }
 
-}
+
 
 export default Toolbar;
